@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/black">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Absensi Mahasiswa"
+        android:textColor="@color/white"
+        android:fontFamily="@font/librebold"
+        android:textSize="35dp" />
+
+    <!-- Mata Kuliah (Dengan Arrow) -->
+    <Spinner
+        android:id="@+id/spinnerSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="#8D27F3"
+        android:hint="Pilih Mata Kuliah" />
+
+    <!-- Kehadiran -->
+    <RadioGroup
+        android:id="@+id/radioGroupAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerSubject"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonPresent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Hadir" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAbsent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak Hadir"
+            android:textColor="@color/white"
+            />
+
+        <!-- RadioButton Izin -->
+        <RadioButton
+            android:id="@+id/radioButtonPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Izin" />
+
+        <!-- RadioButton Sakit -->
+        <RadioButton
+            android:id="@+id/radioButtonSick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Sakit" />
+    </RadioGroup>
+
+    <!-- Tombol Absensi -->
+    <Button
+        android:id="@+id/buttonTakeAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupAttendance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Ambil Absensi" />
+</RelativeLayout>
